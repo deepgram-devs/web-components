@@ -1,0 +1,13 @@
+{
+  "name": "@deepgram-web/web-components",
+  "description": "Shared Astro components for Deepgram sites",
+  "version": "0.0.0",
+  "author": "Luke Oliff <luke@lukeoliff.com>",
+  "type": "module",
+  "exports": "./index.js",
+  "keywords": [
+    "Astro",
+    "Components"
+  ],
+  "license": "MIT"
+}

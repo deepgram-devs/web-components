@@ -1,0 +1,5 @@
+export { default as Footer } from './Footer.astro'
+export { default as Icon } from './Icon.astro'
+export { default as Svg } from './Svg.astro'
+export { default as Link } from './Link.astro'
+export { default as PrimarySection } from './Sections/PrimarySection.astro'
