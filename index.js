@@ -1,5 +1,8 @@
+export { default as Header } from './Header.astro'
 export { default as Footer } from './Footer.astro'
 export { default as Icon } from './Icon.astro'
 export { default as Svg } from './Svg.astro'
 export { default as Link } from './Link.astro'
 export { default as PrimarySection } from './Sections/PrimarySection.astro'
+export { default as HasAside } from './SectionOptions/HasAside.astro'
+export { default as HasGutters } from './SectionOptions/HasGutters.astro'
