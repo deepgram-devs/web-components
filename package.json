@@ -2,7 +2,11 @@
   "name": "@deepgram-web/shared",
   "description": "Shared components and code for Deepgram Astro sites",
   "version": "0.0.1",
-  "author": "Luke Oliff <luke@lukeoliff.com>",
+  "contributors": [
+    "Brian Barrow",
+    "Sandra Rodgers",
+    "Luke Oliff <luke@lukeoliff.com>"
+  ],
   "type": "module",
   "exports": "./index.js",
   "keywords": [
