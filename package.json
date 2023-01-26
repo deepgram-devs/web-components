@@ -1,7 +1,7 @@
 {
-  "name": "@deepgram-web/web-components",
-  "description": "Shared Astro components for Deepgram sites",
-  "version": "0.0.0",
+  "name": "@deepgram-web/shared",
+  "description": "Shared components and code for Deepgram Astro sites",
+  "version": "0.0.1",
   "author": "Luke Oliff <luke@lukeoliff.com>",
   "type": "module",
   "exports": "./index.js",
