@@ -1,39 +1,42 @@
 ---
-// import { parse } from "node-html-parser";
+// import { JSDOM } from "jsdom"
 
 export interface Props {
 	class: string;
-	name: string;
+	icon: string;
 }
 
 function getSVG(name: string) {
-	const filepath = `./assets/images/${name}.svg`;
-	const files = import.meta.globEager<string>("./assets/images/*.svg", {
-		as: "raw",
-	});
+	// const filepath = `../assets/images/${name}.svg`;
+	// const files = import.meta.globEager<string>("../assets/images/*.svg", {
+	// 	as: "raw",
+	// });
 
-	console.log(files);
+	// if (!(filepath in files)) {
+	// 	throw new Error(`${filepath} not found`);
+	// }
 
-	if (!(filepath in files)) {
-		throw new Error(`${filepath} not found`);
-	}
+	// const outerHTML = files[filepath];
+	// const { firstChild: svg } = JSDOM.fragment(outerHTML);
+	// const { attributes, innerHTML } = svg;
+	
+	// console.log(filepath, svg);
+	// const attrs = svg.getAttributeNames().reduce((acc, name) => {
+	// 	return {...acc, [name]: svg.getAttribute(name)};
+	// }, {});
 
-// const root = parse(files[filepath]);
+	// console.log(attrs);
 
-// const svg = root.querySelector("svg");
-// const { attributes, innerHTML } = svg;
-
-// return {
-// 	attributes,
-// 	innerHTML,
-// };
+	return {
+		attributes: {},
+		innerHTML: "",
+	};
 }
 
-// const { icon, ...attributes } = Astro.props as Props;
-// const { attributes: baseAttributes, innerHTML } = getSVG(icon);
+const { icon, ...attributes } = Astro.props as Props;
+const { attributes: baseAttributes, innerHTML } = getSVG(icon);
 
-// const svgAttributes = { ...baseAttributes, ...attributes };
+const svgAttributes = { ...baseAttributes, ...attributes };
 ---
 
-<!-- <svg {...svgAttributes} set:html={innerHTML} /> -->
-<a>s</a>
+<svg {...svgAttributes} set:html={innerHTML} />
