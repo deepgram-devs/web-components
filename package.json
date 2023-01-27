@@ -1,7 +1,7 @@
 {
   "name": "@deepgram-web/shared",
   "description": "Shared components and code for Deepgram Astro sites",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "contributors": [
     "Brian Barrow",
     "Sandra Rodgers",
