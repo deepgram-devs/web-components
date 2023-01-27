@@ -1,0 +1,42 @@
+---
+// import { JSDOM } from "jsdom"
+
+export interface Props {
+	class: string;
+	icon: string;
+}
+
+function getSVG(name: string) {
+	// const filepath = `../assets/icons/${name}.svg`;
+	// const files = import.meta.globEager<string>("../assets/icons/*.svg", {
+	// 	as: "raw",
+	// });
+
+	// if (!(filepath in files)) {
+	// 	throw new Error(`${filepath} not found`);
+	// }
+
+	// const outerHTML = files[filepath];
+	// const { firstChild: svg } = JSDOM.fragment(outerHTML);
+	// const { attributes, innerHTML } = svg;
+	
+	// console.log(filepath, svg);
+	// const attrs = svg.getAttributeNames().reduce((acc, name) => {
+	// 	return {...acc, [name]: svg.getAttribute(name)};
+	// }, {});
+
+	// console.log(attrs);
+
+	return {
+		attributes: {},
+		innerHTML: "",
+	};
+}
+
+const { icon, ...attributes } = Astro.props as Props;
+const { attributes: baseAttributes, innerHTML } = getSVG(icon);
+
+const svgAttributes = { ...baseAttributes, ...attributes };
+---
+
+<svg {...svgAttributes} set:html={innerHTML} />
