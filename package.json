@@ -1,6 +1,7 @@
 {
   "name": "@deepgram-web/shared",
   "description": "Shared components and code for Deepgram Astro sites",
+  "type": "module",
   "version": "0.0.4",
   "contributors": [
     "Brian Barrow",
@@ -13,8 +14,5 @@
     "Components"
   ],
   "license": "MIT",
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.12",
-    "jsdom": "^21.1.0"
-  }
+  "dependencies": {}
 }
