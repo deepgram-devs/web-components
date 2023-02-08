@@ -8,7 +8,10 @@
     "Sandra Rodgers",
     "Luke Oliff <luke@lukeoliff.com>"
   ],
-  "exports": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./tailwind": "./tailwind.config.cjs"
+  },
   "keywords": [
     "Astro",
     "Components"

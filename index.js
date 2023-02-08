@@ -9,7 +9,3 @@ export { default as PrimarySection } from './components/Sections/PrimarySection.
 
 export { default as HasAside } from './components/SectionOptions/HasAside.astro'
 export { default as HasGutters } from './components/SectionOptions/HasGutters.astro'
-
-export * as tailwindConfig from './tailwind.config.js'
-
-// export {}
