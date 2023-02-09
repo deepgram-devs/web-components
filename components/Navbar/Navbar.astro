@@ -1,4 +1,5 @@
 ---
+import Navbar from "./Navbar";
 import Button from "../Button.astro";
 import Link from "../Link.astro";
 // import Svg from "../Svg.astro";
@@ -20,6 +21,9 @@ const BLOG_DOMAIN = "https://blog.deepgram.com"
 ---
 
 <header class="sticky top-0 z-10">
+	<Navbar client:visible>
+		<h1>Hello, Preact 1!</h1>
+	</Navbar>
 	<div class="absolute w-full h-screen bg-black/75 text-white" style="display: none;" ></div>
 	<nav class="absolute inset-x-0 bg-almostBlack/80 text-white bg-blur">
 		<div class="max-w-screen-2xl mx-auto px-6 lg:px-10 flex justify-between items-center xl:justify-start">

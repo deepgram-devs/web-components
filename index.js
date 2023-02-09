@@ -1,4 +1,4 @@
-export { default as Navbar } from './components/Navbar/Navbar.astro'
+export { default as Navbar } from './components/Navbar/Navbar'
 
 export { default as Footer } from './components/Footer.astro'
 export { default as Icon } from './components/Icon.astro'
