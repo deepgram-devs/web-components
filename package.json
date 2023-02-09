@@ -2,7 +2,7 @@
   "name": "@deepgram-web/shared",
   "description": "Shared components and code for Deepgram Astro sites",
   "type": "module",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "contributors": [
     "Brian Barrow",
     "Sandra Rodgers",
