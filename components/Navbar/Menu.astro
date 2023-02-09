@@ -1,21 +1,18 @@
 ---
-import Icon from "../Icon.astro";
 import Button from "../Button.astro";
 
 const { name, gridClass, primary } = Astro.props;
 ---
 
-<div class="relative" x-data={`{ name: '${name}' }`}>
+<div class="relative">
 	<Button
 		icon="angle-down"
-		x-on:click={`menu === name ? menu = null : menu = name`}
-		x-bind:class="{'button--active': menu === name }"
 		iconSuffix
 		class="button button--small button--main-nav button--nav-underline small-icon font-medium"
 		>{name}
 	</Button>
 
-	<div class="absolute flex -ml-20 mt-[1.2rem] min-h-80" style="display: none;" x-show="menu === name">
+	<div class="absolute flex -ml-20 mt-[1.2rem] min-h-80" style="display: none;">
 		{primary && (
 			<div class="bg-darkCharcoal min-w-[44.75rem] pt-4 sm:p-8">
 				<slot name="primary" />

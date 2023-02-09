@@ -1,23 +1,24 @@
 ---
-// import PrimarySection from "../Sections/PrimarySection.astro";
-
-// import Button from "../Button.astro";
-// import Link from "../Link.astro";
+import Button from "../Button.astro";
+import Link from "../Link.astro";
 // import Svg from "../Svg.astro";
 // import Icon from "../Icon.astro";
 
-// import MobileItem from "./MobileItem.astro";
-// import MobileMenu from "./MobileMenu.astro";
-// import MobileMenuItem from "./MobileMenuItem.astro";
-// import Item from "./Item.astro";
-// import Menu from "./Menu.astro";
-// import MenuItem from "./MenuItem.astro";
-// import MenuPrimaryItem from "./MenuPrimaryItem.astro";
+import MobileItem from "./MobileItem.astro";
+import MobileMenu from "./MobileMenu.astro";
+import MobileMenuItem from "./MobileMenuItem.astro";
+import Item from "./Item.astro";
+import Menu from "./Menu.astro";
+import MenuItem from "./MenuItem.astro";
+import MenuPrimaryItem from "./MenuPrimaryItem.astro";
+
+const WWW_DOMAIN = "https://deepgram.com"
+const CONSOLE_DOMAIN = "https://console.deepgram.com"
+const DOCS_DOMAIN = "https://developer.deepgram.com"
+const STATUS_DOMAIN = "https://status.deepgram.com"
+const BLOG_DOMAIN = "https://blog.deepgram.com"
 ---
 
-test
-
-{/*
 <header class="sticky top-0 z-10">
 	<div class="absolute w-full h-screen bg-black/75 text-white" style="display: none;" ></div>
 	<nav class="absolute inset-x-0 bg-almostBlack/80 text-white bg-blur">
@@ -25,16 +26,22 @@ test
 			<div class="mr-[2.875rem] pl-4">
 				<Link href={WWW_DOMAIN} class="flex">
 					<span class="sr-only">Deepgram</span>
-					<Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] md:h-[2.3125rem] w-auto text-fireEngine" />
+					<svg class="my-[1.125rem] h-[1.82rem] md:h-[2.3125rem] w-auto text-fireEngine" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 37" fill="currentColor" stroke="currentColor">
+						<title>Deepgram</title>
+						<g>
+							<path d="M70,18.48V29.06H59.69a6.83,6.83,0,0,1-4.94-1.59c-1.08-1-1.63-2.74-1.71-5.07-.07-1-.11-2.34-.11-4s0-2.94.11-3.91a6.88,6.88,0,0,1,1.83-5A7.28,7.28,0,0,1,60,7.92H75V0H59.68c-5.23,0-9.31,1.25-12.22,3.73S43,9.79,42.87,14.44c0,1,0,2.38,0,4.07s0,3,0,4Q43.43,37,59.41,37H80V18.48Z"></path>
+							<path d="M32.54,3.72Q28.19,0,20.32,0H0V18.52H10V7.94h10a7.24,7.24,0,0,1,5.08,1.61,6.94,6.94,0,0,1,1.83,5c.06,1,.11,2.29.11,3.91s0,2.94-.11,4q-.11,3.48-1.7,5.07a6.84,6.84,0,0,1-4.95,1.59H5V37H20.58q16,0,16.54-14.47c0-1,.05-2.32.05-4s0-3.05-.05-4.06Q36.89,7.45,32.54,3.72Z"></path>
+						</g>
+					</svg>
 				</Link>
 			</div>
 			<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
-				<Button class="button button--mini sm:button--small button--secondary" x-on:click="menu = 'Mobile'" aria-label="Mobile Menu">Menu</Button>
+				<Button class="button button--mini sm:button--small button--secondary" aria-label="Mobile Menu">Menu</Button>
 				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--mini sm:button--small button--primary">Sign Up</Link>
 			</div>
 			<div class="hidden xl:flex-1 xl:flex xl:items-center xl:justify-between">
-				<nav class="flex space-x-[2.1875rem]" x-on:click.outside="menu = null">
-					<!-- Product -->
+				<nav class="flex space-x-[2.1875rem]">
+					{/* <!-- Product -->
 					<Menu name="Product" primary gridClass="lg:grid-cols-1 min-w-[18.25rem]">
 						<MenuPrimaryItem icon="arrow-right" slot="primary" href={`${WWW_DOMAIN}/product-overview`} description="Deepgram AI Speech Platform"
 							><span class="text-white flex">Product Overview</span>
@@ -45,9 +52,9 @@ test
 								class="container flex flex-col draw-underline text-lightIris decoration-lightIris font-medium text-xl gap-2 big-icon"
 							>
 								<div class="flex">
-									<Icon icon="bullseye" class="w-[1em] h-[1em] mr-2 mt-1" />
+									<!-- <Icon icon="bullseye" class="w-[1em] h-[1em] mr-2 mt-1" /> -->
 									<span class="flex items-center text-white text-xl font-normal">Transcription</span>
-									<Icon icon="arrow-right" class="inner w-[1em] ml-[.5em] fill-lightIris" />
+									<!-- <Icon icon="arrow-right" class="inner w-[1em] ml-[.5em] fill-lightIris" /> -->
 								</div>
 								<p class="text-casper text-base font-normal">
 									Automatically transcribe real-time or pre-recorded audio and video into text with AI, plus formatting features for better readability.
@@ -59,9 +66,9 @@ test
 								class="container flex flex-col draw-underline text-lightIris decoration-lightIris font-medium text-xl gap-2 big-icon"
 							>
 								<div class="flex">
-									<Icon icon="chart" class="w-[1em] h-[1em] mr-2 mt-1" />
+									<!-- <Icon icon="chart" class="w-[1em] h-[1em] mr-2 mt-1" /> -->
 									<span class="flex items-center text-white text-xl font-normal">Understanding</span>
-									<Icon icon="arrow-right" class="inner w-[1em] ml-[.5em] fill-lightIris" />
+									<!-- <Icon icon="arrow-right" class="inner w-[1em] ml-[.5em] fill-lightIris" /> -->
 								</div>
 								<p class="text-casper text-base font-normal">
 									Natural Language Understanding (NLU) for true voice intelligence. Get features like summarization, sentiment analysis, language detection, and more.
@@ -93,10 +100,10 @@ test
 						<MenuItem href={`${WWW_DOMAIN}compare-nuance-dragon-speech-recognition-alternatives/`} icon="scale">Compare to Nuance Dragon</MenuItem>
 						<MenuItem href={`${WWW_DOMAIN}/compare-assembly-ai-speech-to-text-api-alternatives/`} icon="scale">Compare to Assembly AI</MenuItem>
 						<MenuItem href={`${WWW_DOMAIN}/compare-speechmatics-speech-to-text-api-alternatives/`} icon="scale">Compare to Speechmatics</MenuItem>
-					</Menu>
+					</Menu> */}
 					<!-- Pricing -->
 					<Item href={`${WWW_DOMAIN}/pricing`} class="text-white">Pricing</Item>
-					<!-- Docs -->
+					{/* <!-- Docs -->
 					<Menu name="Docs" gridClass="lg:grid-cols-2 min-w-[36.375rem]">
 						<MenuItem href={DOCS_DOMAIN} icon="file">Documentation</MenuItem>
 						<MenuItem href={`${DOCS_DOMAIN}/on-prem/`} icon="server-icon">On-Prem Deployment</MenuItem>
@@ -107,38 +114,38 @@ test
 						<MenuItem href={`${DOCS_DOMAIN}/sdks-tools/`} icon="box">SDKs + Tools</MenuItem>
 						<MenuItem href={`${WWW_DOMAIN}/changelog`} icon="rotating-gear">Changelog</MenuItem>
 						<MenuItem href={`https://github.com/orgs/deepgram/discussions`} class="github" icon="github">Community Forum</MenuItem>
-					</Menu>
+					</Menu> */}
 					<!-- Blog -->
 					<Item href={BLOG_DOMAIN} class="text-white">Blog</Item>
-					<!-- About -->
+					{/* <!-- About -->
 					<!-- <Menu name="About" gridClass="lg:grid-cols-1 min-w-[18.25rem]">
 						<MenuItem href={`${WWW_DOMAIN}/about`} icon="deepgram-d">About Us</MenuItem>
 						<MenuItem href="https://github.com/orgs/deepgram/discussions" icon="github">Community Forum</MenuItem>
 						<MenuItem href={`${WWW_DOMAIN}/company/newsroom`} icon="newspaper">Newsroom</MenuItem>
 						<MenuItem href={`${WWW_DOMAIN}/company/careers`} icon="open-door">Careers</MenuItem>
-					</Menu> -->
+					</Menu> --> */}
 				</nav>
-				<div class="flex space-x-[1rem] items-center xl:ml-12 pr-4">
+			  {/* <div class="flex space-x-[1rem] items-center xl:ml-12 pr-4">
 					<Button id="docsearch-button" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
 					<Link href={`${CONSOLE_DOMAIN}/login`} class="button button--small button--main-nav text-white">Log In</Link>
 					<Link href={`${WWW_DOMAIN}/contact-us`} class="button button--secondary button--small w-[7rem]">Contact Us</Link>
 					<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--primary button--small w-[7rem]">Sign Up</Link>
-				</div>
+				</div>  */}
 			</div>
 		</div>
 		<!-- Mobile -->
-		<div class="fixed flex flex-col h-screen inset-0 xl:hidden bg-black" style="display: none;" x-show="menu === 'Mobile'">
+		<div class="fixed flex flex-col h-screen inset-0 xl:hidden bg-black" style="display: none;">
 			<div class="relative inset-x-0 bg-almostBlack text-white">
 				<div class="max-w-screen-2xl mx-auto px-6 flex justify-between items-center xl:justify-start">
 					<div class="mr-[2.875rem]">
 						<Link href={WWW_DOMAIN} class="flex">
 							<span class="sr-only">Deepgram</span>
-							<Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] w-auto text-dgRed" />
+							<!-- <Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] w-auto text-dgRed" /> -->
 						</Link>
 					</div>
 					<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
 						<Button id="docsearch-button-mobile" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
-						<Button icon="xmark-large" class="button big-icon button--main-nav" x-on:click="menu = null" aria-label="Close Menu" />
+						<Button icon="xmark-large" class="button big-icon button--main-nav" aria-label="Close Menu" />
 					</div>
 				</div>
 			</div>
@@ -204,5 +211,3 @@ test
 		@apply transition-[margin] duration-300 ease-in-out;
 	}
 </style>
-
-*/}

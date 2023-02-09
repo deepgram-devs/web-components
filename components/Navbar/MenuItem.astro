@@ -1,5 +1,5 @@
 ---
-import Icon from "../Icon.astro";
+// import Icon from "../Icon.astro";
 import Link from "../Link.astro";
 
 const { href, icon, class: classes } = Astro.props;
@@ -7,7 +7,7 @@ const { href, icon, class: classes } = Astro.props;
 
 <Link href={href} icon={icon} class:list={["fill-cloud container draw-underline decoration-lightIris flex text-white items-center gap-2 big-icon", classes]}>
 	<span><slot /></span>
-	<Icon icon="arrow-right" class="inner w-[1em] h-[1em] fill-lightIris" />
+	<!-- <Icon icon="arrow-right" class="inner w-[1em] h-[1em] fill-lightIris" /> -->
 </Link>
 
 <style>
